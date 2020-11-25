@@ -1,0 +1,162 @@
+[
+    [
+        "Case Study: Prolonged Infectious SARS-CoV-2 Shedding from an Asymptomatic Immunocompromised Individual with Cancer",
+        "This case study describes a female immunocompromised individual with chronic lymphocytic leukemia and acquired hypogammaglobulinemia who became persistently infected with SARS-CoV-2. Although asymptomatic throughout the course of infection, she demonstrated prolonged shedding of infectious SARS-CoV-2 virus and RNA. This study demonstrates that certain individuals may remain infectious for prolonged periods of time and highlights the need for further studies to understand risk factors for prolonged infectious SARS-CoV-2 shedding.",
+        "November 4, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.049",
+        "Cell",
+        1
+    ],
+    [
+        "Quick COVID-19 Healers Sustain Anti-SARS-CoV-2 Antibody Production",
+        "Longitudinal analyses of antibody responses to SARS-CoV-2 demonstrate that individuals with sustained virus-specific IgG production have shorter disease trajectories, with a subset demonstrating increased somatic hypermutation and higher levels of activated CD4+ cells.",
+        "November 3, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.051",
+        "Cell",
+        2
+    ],
+    [
+        "\u03b2-Coronaviruses Use Lysosomes for Egress Instead of the Biosynthetic Secretory Pathway",
+        "Ghosh et\u00a0al. provide evidence that \u03b2-coronaviruses do not use the biosynthetic secretory pathway typically used by enveloped viruses to leave infected cells. Instead, these viruses traffic to lysosomes for unconventional egress by Arl8b-dependent lysosomal exocytosis. Their non-lytic release results in lysosome deacidification, inactivation of lysosomal degradation enzymes, and disruption of antigen presentation.",
+        "October 27, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.039",
+        "Cell",
+        3
+    ],
+    [
+        "Precise and Programmable Detection of Mutations Using Ultraspecific Riboregulators",
+        "(Cell 180, 1018\u20131032.e1\u2013e16; March 5, 2020)",
+        "October 29, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.020",
+        "Cell",
+        4
+    ],
+    [
+        "Elicitation of Potent Neutralizing Antibody Responses by Designed Protein Nanoparticle Vaccines for SARS-CoV-2",
+        "Walls et\u00a0al. describe a potential nanoparticle vaccine for COVID-19, made of a self-assembling protein nanoparticle displaying the SARS-CoV-2 receptor-binding domain in a highly immunogenic array reminiscent of the natural virus. Their nanoparticle vaccine candidate elicits a diverse, potent, and protective antibody response, including neutralizing antibody titers 10-fold higher than the prefusion-stabilized spike ectodomain trimer.",
+        "October 30, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.043",
+        "Cell",
+        5
+    ],
+    [
+        "Translation and Replication Dynamics of Single RNA Viruses",
+        "Boersma et\u00a0al. develop a single-molecule imaging assay (VIRIM) to study translation, replication, and virus-host interactions of\u00a0+RNA viruses. They observe heterogeneity in translation and replication of single viruses, identify replication of the incoming viral genome as a bottleneck for successful infection, and identify host genes mediating this antiviral activity.",
+        "November 13, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.019",
+        "Cell",
+        6
+    ],
+    [
+        "Single-Cell Profiling of Ebola Virus Disease In\u00a0Vivo Reveals Viral and Host Dynamics",
+        "Single-cell profiling of circulating immune cells during Ebola virus (EBOV) infection in non-human primates resolves molecular correlates of viral tropism, characterizes replication dynamics within infected cells, and distinguishes expression changes that are mediated by viral infection from those due to cytokine signaling.",
+        "November 6, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.002",
+        "Cell",
+        7
+    ],
+    [
+        "Commensal Microbiota Modulation of Natural Resistance to Virus Infection",
+        "Commensal microbiota regulate interferon signaling to protect against pathogenic viral infections.",
+        "November 18, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.047",
+        "Cell",
+        8
+    ],
+    [
+        "Compromised Humoral Functional Evolution Tracks with SARS-CoV-2 Mortality",
+        "Analyses of the functional humoral trajectories associated with the resolution of SARS-CoV-2 infection find that despite equivalent IgM and IgA immunity to the virus across all levels of disease severity, survival and recovery are linked to early class switching to IgG and the ability to leverage Fc\u03b3 receptors targeting the spike protein.",
+        "November 3, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.052",
+        "Cell",
+        9
+    ],
+    [
+        "Targeted Activation of Hippocampal Place Cells Drives Memory-Guided Spatial Behavior",
+        "Selective stimulation of a small number of hippocampal place cells in mice provides causal evidence that hippocampal place cells actively support spatial navigation and memory.",
+        "November 6, 2020",
+        "https://doi.org/10.1016/j.cell.2020.09.061",
+        "Cell",
+        10
+    ],
+    [
+        "Defining the Teratoma as a Model for Multi-lineage Human Development",
+        "The teratoma is characterized as a model for multi-lineage human development with cell types represented across all three germ layers and utilized to enable assaying of the effects of genetic perturbations simultaneously across multiple cell types, and a molecular sculpting strategy is presented to enrich for specific tissues.",
+        "November 4, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.018",
+        "Cell",
+        11
+    ],
+    [
+        "M.\u00a0tuberculosis Reprograms Hematopoietic Stem Cells to Limit Myelopoiesis and Impair Trained Immunity",
+        "The pathogen Mycobacterium tuberculosis reprograms hematopoietic stem cells and limits myelopoiesis while impairing trained immunity responses via a type I IFN/iron signaling axis.",
+        "October 29, 2020",
+        "https://doi.org/10.1016/j.cell.2020.09.062",
+        "Cell",
+        12
+    ],
+    [
+        "Multi-Omics Resolves a Sharp Disease-State Shift between Mild and Moderate COVID-19",
+        "Using serial blood draws from COVID-19 patients, Su et\u00a0al. present an extensive multi-omics dataset of plasma and single PBMCs covering the first week of infection following clinical diagnosis, which includes information on plasma proteins, metabolites, and on PBMC transcriptomic and surface-protein data, immune receptor sequences, secreted proteins, and electronic health record data. Their integrated analysis identifies a major immunological shift between mild and moderate infection, which includes an increase in inflammation, drop in blood nutrients, and the emergence of novel immune cell subpopulations that intensify with disease severity.",
+        "October 28, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.037",
+        "Cell",
+        13
+    ],
+    [
+        "The Strength of Curiosity and Purpose",
+        "Seven months ago  we shared our thoughts  on the toll the COVID-19 pandemic was beginning to take on the scientific community. At that stage it was already clear that 2020 would not be a normal year for any of us. When finalizing this issue, we realized that nearly half of the papers relate to SARS-CoV-2 and COVID-19\u2014a topic that didn\u2019t exist a year ago. This alone speaks volumes about the remarkable efforts of the scientific community, but the depths of compassion and tenacity run deeper.",
+        "November 12, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.031",
+        "Cell",
+        14
+    ],
+    [
+        "Some Like It Sweet: Dendritic Cells Add Sugar to Their T(ea)",
+        "In this issue of Cell, Liu et\u00a0al. present FucoID, a glycosyltransferase-mediated tagging platform, to biochemically label and capture antigen-specific T\u00a0cells. With this technology, the authors isolate and characterize tumor-specific CD8+ and CD4+ T\u00a0cells in murine tumor models. FucoID shows promise as a tool to enhance the understanding of anti-tumor immune responses.",
+        "November 12, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.033",
+        "Cell",
+        15
+    ],
+    [
+        "Antibody Affinity Shapes the Choice between Memory and Germinal Center B Cell Fates",
+        "Using an unbiased fate mapping approach in immunized mice with intact immune systems, Viant et\u00a0al. show that contemporaneously developing memory and GC B cells differ in their affinity for antigen throughout the immune response. GC cells are enriched in antigen binding, but memory B cells are not. Moreover, the affinity difference is unrelated to the number of somatic mutations and is already present in precursors cells, with higher-affinity cells preferentially entering the GC.",
+        "October 29, 2020",
+        "https://doi.org/10.1016/j.cell.2020.09.063",
+        "Cell",
+        16
+    ],
+    [
+        "Bacterial Retrons Function In Anti-Phage Defense",
+        "Retrons are part of a large family of anti-phage defense systems that are widespread in bacteria and confer resistance against a broad range of phages, mediated by abortive infection.",
+        "November 5, 2020",
+        "https://doi.org/10.1016/j.cell.2020.09.065",
+        "Cell",
+        17
+    ],
+    [
+        "Spatial Multiplexing of Fluorescent Reporters for Imaging Signaling Network Dynamics",
+        "Simultaneous signals such as second messengers and kinase activities, within a single cell, can be captured through the fusion of fluorescent reporters to pairs of self-assembling peptides to generate stable signaling reporter islands.",
+        "November 23, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.035",
+        "Cell",
+        18
+    ],
+    [
+        "Striosomes Mediate Value-Based Learning Vulnerable in Age and a Huntington\u2019s Disease Model",
+        "Friedman et\u00a0al. find that specialized regions of the striatum, a key part of the brain\u2019s movement and motivation control system, are essential for learning about the values of good and bad outcomes of decisions. The learning signals in striosomes scale according to subjective value and are vulnerable to decline with aging and in neurodegenerative disorders.",
+        "October 27, 2020",
+        "https://doi.org/10.1016/j.cell.2020.09.060",
+        "Cell",
+        19
+    ],
+    [
+        "Cellular Control of Viscosity Counters Changes in Temperature and Energy Availability",
+        "Cells modulate cytosolic viscosity through the production of glycogen and trehalose in response to changes in temperature and energy availability. This response, called \u201cviscoadaptation\u201d, regulates the rates of diffusion-controlled processes and alters the biophysical properties of the cytosol both homeostatically and acutely.",
+        "November 5, 2020",
+        "https://doi.org/10.1016/j.cell.2020.10.017",
+        "Cell",
+        20
+    ]
+]
