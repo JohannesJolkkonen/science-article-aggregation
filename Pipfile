@@ -24,6 +24,7 @@ PySocks = "==1.7.0"
 Werkzeug = "==0.15.4"
 boto3 = "*"
 mysql-connector-python-rf = "*"
+uwsgi = "*"
 
 [dev-packages]
 autopep8 = "*"
