@@ -5,8 +5,10 @@ import os
 
 @app.route('/', methods = ["GET"])
 def home():
-    content = main.getContent('Cell')
-    return render_template('index.html', content=content) 
+    # Content is a dictionary of lists from different journals 
+    content = main.getContent()
+    return render_template('index.html', 
+                cell_content=content['Cell'], nature_content=content['Nature']) 
 
 
 

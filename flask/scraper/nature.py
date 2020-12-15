@@ -1,21 +1,39 @@
 import requests
 from bs4 import BeautifulSoup
 import boto3
+import datetime
 
-url = ''
 
-headers= {'User-Agent':'Mozilla/5.0'}
+def form_query(terms):
+    # Format a search-url for scraping, takes list of search terms as argument
+    search_str = ''
+    for term in terms:
+        search_str += (term + '%20')
+    url = f'https://www.nature.com/search?q={search_str}&order=date_desc&article_type=research&journal=nature'
+    return url
 
-def scrape():
+# print(url)
+headers = {'User-Agent': 'Mozilla/5.0'}
+
+def scrape(DBConn, terms):
+    url = form_query(terms)
     html = requests.get(url, headers=headers).content
     soup = BeautifulSoup(html, "html.parser")
-    articles = soup.find('div', attrs={'class': 'articleCitation'})
-    
-    with open('soup.txt', 'w', encoding='utf-8') as file:
-        for item in line.find_all('div', attrs={'class': 'article-details'}):
-            title = item.find('h2', attrs={'class':'title'}).text.split('0')[1]
-            brief = item.find('span', attrs={'class':'content'}).text
-            link = item.find('a', attrs={'href': lambda L: L and L.startswith('https')}).text
-            file.write(f'{title} --- {brief} \n {link} \n')
 
-scrape()
+    for article in soup.find_all('h2', attrs={'role': 'heading'}, limit=3):
+        link = article.find('a', attrs={'href': lambda L: L and L.startswith('/articles')})
+        
+        if link is not None:
+            url = 'https://nature.com' + link['href']
+        else:
+            continue
+        details = requests.get(url, headers=headers).content
+        det_soup = BeautifulSoup(details, "html.parser")
+        title = det_soup.find('title').text.split('|')[0].rstrip()
+        abstract = det_soup.find('meta', attrs={'name': 'dc.description'})['content'][:255] + '...'
+        date = det_soup.find('time', attrs={'itemprop':'datePublished'}).text
+        obj = {'title': title, 'abstract': abstract,
+               'link': url, 'date': date, 'source': 'Nature'}
+        DBConn.write(obj)
+    
+# scrape(['virus', 'pandemic'])

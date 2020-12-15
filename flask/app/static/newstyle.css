@@ -1,10 +1,43 @@
+.body {
+    background: black;
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 27px;
+    font-family: 'Calibri';
+    text-align: center;
+}
+
 section, aside{
     float: left;
     width: 42%;
     padding: 2%;
     margin: 1%;
-    background: lightgrey;
+    background-color:white;
+    border:black;
+    box-shadow: 2cm, 2cm, 0cm, 2cm;
 }
+
+
+
+h3 {
+    font-size: 15px;
+    font-family: 'Calibri';
+}
+
+.abstract {
+    font-size: 10p;
+    font-family: 'Calibri', serif;
+}
+.date {
+font-size: 10p;
+    font-family: 'Calibri', serif;
+    font-weight: bold;
+    
+}
+
 
 /* .row:after {
     content: "";

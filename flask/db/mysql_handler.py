@@ -40,21 +40,40 @@ class DBConnection:
         return True
 
     def write(self, dict):
+        if self.check_title_exists(dict['title']):
+            print(f"{dict['title']} already in database -- skip duplicate.\n")
+            return
         sql = f"""
             INSERT INTO journal_articles (title, abstract, url, published_date, source) 
             VALUES (
                 '{dict['title']}',
                 '{dict['abstract']}',
-                '{dict['link']}','
+                '{dict['link']}',
                 '{dict['date']}',
-                '{dict['source']}');"
+                '{dict['source']}');
             """
         self.cursor.execute(sql)
         self.conn.commit()
-        return True
-        # print(f"Added {dict['title']}. Published: {dict['date']} on journal: {dict['source']}")
+        print(f"Added {dict['title']}. Published: {dict['date']} on journal: {dict['source']}")
 
     def query(self, sql):
         self.cursor.execute(sql)
         data = self.cursor.fetchall()
         return data
+
+    def truncate(self):
+        sql = """TRUNCATE TABLE journal_articles"""
+        self.cursor.execute(sql)
+        return 
+
+    def check_title_exists(self, title):
+        sql = f"""
+            SELECT * FROM journal_articles 
+            WHERE title = "{title}"; 
+            """
+        self.cursor.execute(sql)
+        data = self.cursor.fetchall()
+        if len(data) > 0:
+            return True
+        else:
+            return False
