@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./flask
+    container_name: flask
+    restart: always
+    environment:
+      - DB_HOST=content-database-2.cq13lied2jix.eu-central-1.rds.amazonaws.com
+      - DB_PASS=12341234
+      - DB_USER=admin
+    expose:
+      - 8080
+    
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"

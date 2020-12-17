@@ -1,13 +1,33 @@
 {
     "AWSEBDockerrunVersion": "1",
-    "Image": {
-        "Name": "902466892473.dkr.ecr.eu-central-1.amazonaws.com/flask-app",
-        "Update": "true"
-    },
+    "containerDefinitions": [
+        {
+            "name": "flask",
+            "image": "902466892473.dkr.ecr.eu-central-1.amazonaws.com/flask-app",
+            "Ports": [
+                {
+                    "ContainerPort":8080 
+                }
+            ]
+        },
+        {
+            "name": "nginx",
+            "image": "902466892473.dkr.ecr.eu-central-1.amazonaws.com/nginx",
+            "essential": true,
+            "links": ["flask"],
+            "portMappings": [
+                {
+                    "ContainerPort":80,
+                    "HostPort":80
+                }
+            ]
+
+        }
+    ],
     "Ports": [
         {
-            "ContainerPort": "8080",
-            "HostPort": "8080"
+            "ContainerPort": 80,
+            "HostPort": 80
         }
     ]
 }

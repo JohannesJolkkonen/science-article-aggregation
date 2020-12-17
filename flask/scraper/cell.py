@@ -3,14 +3,16 @@ from bs4 import BeautifulSoup
 import boto3
 import datetime
 
-url = 'https://www.cell.com/action/doSearch?journalCode=cell&seriesISSNFltraddfilter=0092-8674&date=range&dateRange=1m&searchAttempt=&searchType=advanced&doSearch=Search'
-search = ["virus", "pandemic"]
-n=1
-for term in search:
-    term.replace(' ','+')
-    string = f'&op1=or&searchText{str(n)}={term}&occurrences1=all'
-    url += string
-    n+=1
+def form_query(terms):
+    # Format a search-url for scraping, takes list of search terms as argument
+    url = 'https://www.cell.com/action/doSearch?journalCode=cell&seriesISSNFltraddfilter=0092-8674&date=range&dateRange=1m&searchAttempt=&searchType=advanced&doSearch=Search'
+    n=1
+    for term in terms:
+        term.replace(' ','+')
+        string = f'&op1=or&searchText{str(n)}={term}&occurrences1=all'
+        url += string
+        n+=1
+    return url
 
 # print(url)
 headers= {'User-Agent':'Mozilla/5.0'}
@@ -20,7 +22,8 @@ def remove_prefix(string, prefix):
         string = string.replace(prefix, '')
     return string
 
-def scrape(DBConn):
+def scrape(DBConn, terms):
+    url = form_query(terms)
     html = requests.get(url, headers=headers).content
     soup = BeautifulSoup(html, "html.parser")
     

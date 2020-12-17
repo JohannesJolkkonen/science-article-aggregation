@@ -1,7 +1,8 @@
 FROM nginx
 
-RUN mkdir /etc/nginx/sites-available
+EXPOSE 80
 
-COPY app.conf /etc/nginx/sites-available/
+RUN rm /etc/nginx/conf.d/default.conf
 
-RUN ln -s /etc/nginx/sites-available/app.conf /etc/nginx/conf.d/
+COPY app.conf /etc/nginx/conf.d/default.conf
+
