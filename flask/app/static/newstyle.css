@@ -1,13 +1,13 @@
-.body {
-    background: black;
+body {
+    background: white;
     margin: 0;
-    color: white;
 }
 
 h1 {
-    font-size: 27px;
+    font-size: 40px;
     font-family: 'Calibri';
     text-align: center;
+
 }
 
 section, aside{
@@ -18,23 +18,42 @@ section, aside{
     background-color:white;
     border:black;
     box-shadow: 2cm, 2cm, 0cm, 2cm;
+    text-align: center;
 }
 
+img {
+    margin-bottom: 4%
+}
+section {
+    border-right: 1.5px solid;
+    padding-right: 5%;
+    margin-left: 1%;
+}
 
-
+.article {
+    padding: 1% 1% 1% 1%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid;
+    background-color: lightgray
+}
+   
 h3 {
     font-size: 15px;
     font-family: 'Calibri';
+    margin-bottom: -15px;
+
 }
 
 .abstract {
     font-size: 10p;
     font-family: 'Calibri', serif;
 }
+
 .date {
 font-size: 10p;
     font-family: 'Calibri', serif;
     font-weight: bold;
+    white
     
 }
 

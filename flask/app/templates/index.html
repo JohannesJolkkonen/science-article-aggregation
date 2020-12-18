@@ -2,31 +2,31 @@
 
 <html>
 <head>
-    <title>Asd</title>
+    <title>Science Digest</title>
     <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='newstyle.css') }}">
 </head>
 
 <body>
-    <h1>Hello, Updates!</h1>
+    <h1>Science Digest</h1>
     <section>
-        <p>
-            <img src="{{url_for('static', filename='cell.png')}}" alignment='middle'/>
-            {% for item in cell_content[:6] %}
-                <h3><a class='article-title' href='{{item[3]}}'>{{item[0]}}></a></h3><br>
+        <img src="{{url_for('static', filename='cell.png')}}" alignment='middle' width=60% height=65% />
+        {% for item in cell_content[:6] %}
+            <div class="article">
+                <h3><a class='article-title' href='{{item[3]}}'>{{item[0]}}</a></h3><br>
                 <div class='date'>{{item[2]}}</div><br>
-                <div class='abstract'>{{item[1]}}</div><br>
-            {% endfor %}
-        </p>
+                <div class='abstract'>{{item[1]}}</div><br>    
+            </div>
+        {% endfor %}
     </section>
     <aside>
-        <p>
-            <img src="{{url_for('static', filename='nature.png')}}" alignment='middle' width=80% height=65%/>
-            {% for item in nature_content[:6] %}
-                <h3><a class='article-title' href='{{item[3]}}'>{{item[0]}}></a></h3><br>
+        <img src="{{url_for('static', filename='nature.png')}}" alignment='middle' width=60% height=65% />
+        {% for item in nature_content[:6] %}
+            <div class="article">
+                <h3><a class='article-title' href='{{item[3]}}'>{{item[0]}}</a></h3><br>
                 <div class='date'>{{item[2]}}</div><br>
                 <div class='abstract'>{{item[1]}}</div><br>
-            {% endfor %}
-        </p>
+            </div>
+        {% endfor %}
     </aside>
 </body>
 </html>
