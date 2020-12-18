@@ -5,13 +5,8 @@ import datetime
 
 def form_query(terms):
     # Format a search-url for scraping, takes list of search terms as argument
-    url = 'https://www.cell.com/action/doSearch?journalCode=cell&seriesISSNFltraddfilter=0092-8674&date=range&dateRange=1m&searchAttempt=&searchType=advanced&doSearch=Search'
-    n=1
-    for term in terms:
-        term.replace(' ','+')
-        string = f'&op1=or&searchText{str(n)}={term}&occurrences1=all'
-        url += string
-        n+=1
+    search_str = "+".join(terms)
+    url = f"https://www.cell.com/action/doSearch?text1={search_str}&field1=AllField&Ppub=&Ppub=&journalCode=cell&sortBy=Earliest&startPage=&currentPage=&ContentItemType=fla"
     return url
 
 # print(url)
@@ -27,13 +22,21 @@ def scrape(DBConn, terms):
     html = requests.get(url, headers=headers).content
     soup = BeautifulSoup(html, "html.parser")
     
-    for article in soup.find_all('div', attrs={'class': 'article-details'}):
-        prefix = article.find('div', attrs={'class':'scopus'}).text
-        title = remove_prefix(article.find('h2', attrs={'class':'title'}).text, prefix)
-        abstract = article.find('span', attrs={'class':'content'}).text
-        date = article.find('div', attrs={'class':"published-online"}).text.split(':')[1].lstrip(' ')
-        link = article.find('a', attrs={'href': lambda L: L and L.startswith('https')}).text
-        obj = {'title': title, 'abstract': abstract, 'link': link, 'date': date,'source': 'Cell'}
+    for article in soup.find_all('h2', attrs={'class': 'meta__title'}, limit=6):
+        link = article.find('a')['href']
+        if link is not None:
+            url = 'https://cell.com' + link
+        else:
+            continue
+        
+        details = requests.get(url, headers=headers).content
+        det_soup = BeautifulSoup(details, "html.parser")
+
+        title = det_soup.find('meta', attrs={'property':'og:title'})['content']
+        abstract = det_soup.find('meta', attrs={'property':'og:description'})['content']
+        date = det_soup.find('span', attrs={
+                             'class': "article-header__publish-date__value"}).text
+        obj = {'title': title, 'abstract': abstract, 'link': url, 'date': date,'source': 'Cell'}
         DBConn.write(obj)
-    
+        print(url)
         

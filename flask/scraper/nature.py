@@ -20,7 +20,7 @@ def scrape(DBConn, terms):
     html = requests.get(url, headers=headers).content
     soup = BeautifulSoup(html, "html.parser")
 
-    for article in soup.find_all('h2', attrs={'role': 'heading'}, limit=3):
+    for article in soup.find_all('h2', attrs={'role': 'heading'}, limit=6):
         link = article.find('a', attrs={'href': lambda L: L and L.startswith('/articles')})
         
         if link is not None:

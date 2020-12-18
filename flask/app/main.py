@@ -2,7 +2,7 @@ from db.mysql_handler import DBConnection
 from scraper import cell, nature
 import json
  
-search = ["coronavirus"]
+search = ["covid-19"]
 
 def scrapeAll():
     db = DBConnection()
@@ -33,11 +33,8 @@ def runQuery():
     db = DBConnection()
     sql = "TRUNCATE TABLE journal_articles;"
     db.cursor.execute(sql)
-    
 
-if __name__ == '__main__':
-	scrapeAll()
+scrapeAll()
 
 # runQuery()
-# scrapeAll()
 # getContent('Cell')
