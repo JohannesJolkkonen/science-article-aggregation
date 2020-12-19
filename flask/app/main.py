@@ -22,10 +22,9 @@ def getContent():
             sql = f"SELECT * from journal_articles where source='{source}'"
             data = db.query(sql)
             content[source] = data
-            with open(f'{source}-results.txt', 'w') as file:
-                json.dump(data, file, indent=4)
         except Exception as e:
             print(e)
+    content['meta'] = {'topic': ' '.join(search)}
     return content
 
 
@@ -34,7 +33,7 @@ def runQuery():
     sql = "TRUNCATE TABLE journal_articles;"
     db.cursor.execute(sql)
 
-scrapeAll()
+# scrapeAll()
 
 # runQuery()
 # getContent('Cell')

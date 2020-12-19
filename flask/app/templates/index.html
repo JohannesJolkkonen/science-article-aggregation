@@ -8,6 +8,7 @@
 
 <body>
     <h1>Science Digest</h1>
+    <h2>Latest articles for topic '{{meta['topic']}}'</h2>
     <section>
         <img src="{{url_for('static', filename='cell.png')}}" alignment='middle' width=60% height=65% />
         {% for item in cell_content[:6] %}

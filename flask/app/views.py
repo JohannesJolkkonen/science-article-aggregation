@@ -7,7 +7,7 @@ import os
 def home():
     # Content is a dictionary of lists from different journals 
     content = main.getContent()
-    return render_template('index.html', 
+    return render_template('index.html', meta=content['meta'],
                 cell_content=content['Cell'], nature_content=content['Nature']) 
 
 

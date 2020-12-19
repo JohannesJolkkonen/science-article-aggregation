@@ -34,8 +34,11 @@ def scrape(DBConn, terms):
 
         title = det_soup.find('meta', attrs={'property':'og:title'})['content']
         abstract = det_soup.find('meta', attrs={'property':'og:description'})['content']
-        date = det_soup.find('span', attrs={
+        try: 
+            date = det_soup.find('span', attrs={
                              'class': "article-header__publish-date__value"}).text
+        except :
+            date = 'Publication date unavailable'
         obj = {'title': title, 'abstract': abstract, 'link': url, 'date': date,'source': 'Cell'}
         DBConn.write(obj)
         print(url)
